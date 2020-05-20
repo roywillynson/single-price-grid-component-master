@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+:root {
+    /* Primary colors */
+    --Cyan: hsl(179, 62%, 43%);
+    --LightCyan: hsl(179, 73%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+
+    /* Neutral colors */
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLE */
+body {
+    height: 100vh;
+    background: var(--LightGray);
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p,
+li,
+span {
+    line-height: 1.4em;
+}
+
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: .95em;
+    color: white;
+}
+
+
+/* CONTENT STYLE*/
+.container {
+    background-color: white;
+    width: 625px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.sub-container {
+
+    padding: 2.3em;
+}
+
+
+.row {
+    display: flex;
+}
+
+/* COMMUNITY SUBSCRIPTION */
+.community__title {
+    color: var(--Cyan);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 1.1em;
+}
+
+
+.community__subtitle {
+    color: var(--BrightYellow);
+}
+
+.community__description {
+    color: var(--GrayishBlue);
+}
+
+/* MOTHLY SUBSCRIPTION STYLE*/
+.mothly-subs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    color: white;
+    background-color: var(--Cyan);
+}
+
+.mothly-subs>p {
+    display: flex;
+}
+
+.mothly-subs__btn {
+    color: white;
+    background-color: var(--BrightYellow);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    padding: 15px 0;
+    margin-top: 2em;
+    transition: all .3s ease-in-out;
+
+
+}
+
+.mothly-subs__btn:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.cash-bigger {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+.ghost {
+    align-self: center;
+    margin-left: 0.6em;
+    opacity: 0.55;
+}
+
+/* WHY US STYLE*/
+
+.why-us {
+    width: 50%;
+    color: white;
+    background-color: var(--LightCyan);
+}
+
+.why-us__list {
+    list-style: none;
+    font-size: 15px;
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        height: 100%;
+    }
+
+    .container {
+        margin: 20% 25px;
+    }
+
+    .sub-container {
+        padding: 2.1em 1.9em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .why-us,
+    .mothly-subs {
+        width: 100%;
+    }
+
+    footer {
+        position: static;
+        width: 100%;
+    }
+}
